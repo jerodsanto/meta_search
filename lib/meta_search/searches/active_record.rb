@@ -43,8 +43,6 @@ module MetaSearch
           builder.build(params || {})
         end
 
-        alias_method :search, :metasearch unless respond_to?(:search)
-
         def _metasearch_method_authorized?(name, metasearch_object)
           name = name.to_s
           meth = self._metasearch_methods[name]
